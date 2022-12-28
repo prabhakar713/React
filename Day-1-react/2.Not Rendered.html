@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React</title>
+  </head>
+  <body>
+    <div id="root">Not Rendered</div>
+  </body>
+  <!-- if you render script before of react script packate (CDN package) ,then react will not work ,it will say react is not defined -->
+  <!-- order matters --writing the scripts in the order they are used -->
+  <script>
+    const heading = React.createElement("h1", {}, "hello world");
+    console.log(heading);
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    //passing a react element inside the root
+    root.render(heading);
+  </script>
+
+
+  <!-- cdn packate -->
+  <script
+    crossorigin
+    src="https://unpkg.com/react@18/umd/react.development.js"
+  ></script>
+  <script
+    crossorigin
+    src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+  ></script>
+  <!-- create h1 tag using react -->
+</html>

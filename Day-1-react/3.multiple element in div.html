@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React</title>
+  </head>
+  <body>
+    <div id="root">Not Rendered</div>
+    <!-- doing this with react -->
+    <!-- <div id="container">
+      <h1>heading 11</h1>
+      <h2>heading 12</h2>
+    </div> -->
+  </body>
+
+  <!-- cdn packate -->
+  <script
+    crossorigin
+    src="https://unpkg.com/react@18/umd/react.development.js"
+  ></script>
+  <script
+    crossorigin
+    src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+  ></script>
+  <!-- create h1 tag using react -->
+  <script>
+    //creating multiple element in div
+    const heading = React.createElement(
+      "h1",
+      {
+        id: "title",
+      },
+      "heading 1"
+    );
+    const heading2 = React.createElement(
+      "h2",
+      {
+        id: "title",
+      },
+      "heading 2"
+    );
+    const container = React.createElement(
+      "div",
+      {
+        id: "container",
+      },
+      [heading, heading2]
+    );
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    //passing a react element inside the root
+    root.render(container);
+  </script>
+</html>
